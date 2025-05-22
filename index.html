@@ -38,8 +38,11 @@
     </header>
     <main>
       <article class="calculator_input-group">
-        <label for="bill" class="input-group_label">Bill</label>
-        <div class="input-group_field">
+        <div class="label-error-wrapper">
+          <label for="bill" class="input-group_label">Bill</label>
+          <p class="error-input bill-error hidden">can't be zero</p>
+        </div>
+        <div class="input-group_field bill-input-group">
           <img
             class="input-group__icon"
             src="./images/icon-dollar.svg"
@@ -63,14 +66,26 @@
           <button class="tip-options_btn">15%</button>
           <button class="tip-options_btn">25%</button>
           <button class="tip-options_btn">50%</button>
-          <button class="tip-options_btn tip-options_btn-custom">Custom</button>
+          <div class="tip-options_btn tip-options_btn-custom">
+            <input
+              id="tip-options_input"
+              class="tip-options_input"
+              type="number"
+              placeholder="Custom"
+            />
+          </div>
         </div>
       </section>
 
       <!-- Number of people -->
       <article class="calculator_input-group">
-        <label for="person" class="input-group__label">Number of People</label>
-        <div class="input-group_field">
+        <div class="label-error-wrapper">
+          <label for="person" class="input-group__label"
+            >Number of People</label
+          >
+          <p class="error-input person-error hidden">can't be zero</p>
+        </div>
+        <div class="input-group_field person-input-group">
           <img
             class="input-group__icon"
             src="./images/icon-person.svg"
@@ -78,7 +93,7 @@
           />
           <input
             class="input-group__input"
-            id="person"
+            id="num-person"
             name="person"
             type="number"
           />
@@ -93,14 +108,14 @@
               <p class="results_title">Tip Amount</p>
               <p class="results_subtitle">/ person</p>
             </div>
-            <div class="results_value">$4.27</div>
+            <div class="results_value tip-amount-per-person">$0.00</div>
           </div>
           <div class="results_row">
             <div class="results_label">
               <p class="results_title">Total</p>
               <p class="results_subtitle">/ person</p>
             </div>
-            <div class="results_value">$32.79</div>
+            <div class="results_value total-amount-per-person">$0.00</div>
           </div>
         </div>
         <button class="results_reset-btn">RESET</button>
@@ -111,8 +126,12 @@
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Boyutife</a>.
+        >. Coded by
+        <a href="https://www.frontendmentor.io/profile/Boyutife" target="_blank"
+          >Boyutife</a
+        >.
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

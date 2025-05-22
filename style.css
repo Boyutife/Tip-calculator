@@ -117,11 +117,33 @@ input:focus {
   font-weight: 700;
   font-family: 'Space mono';
   font-size: 1rem;
+  cursor: pointer;
 }
 
 .tip-options_btn-custom {
   color: var(--dark-grayish-cyan);
   background-color: var(--very-light-grayish-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.tip-options_input {
+  text-align: end;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  font-family: 'Space Mono';
+  height: 100%;
+  padding-right: 0.25rem;
+}
+
+.tip-options_input::placeholder {
+  text-align: center;
+  color: var(--dark-grayish-cyan);
+  font-weight: 700;
 }
 
 /* Results Section */
@@ -173,6 +195,7 @@ input:focus {
   border: none;
   background-color: var(--strong-cyan);
   color: var(--very-dark-cyan);
+  cursor: pointer;
 }
 
 /* footer */
@@ -180,6 +203,37 @@ footer {
   padding-bottom: 1rem;
   width: 100%;
   background-color: var(--white);
+}
+
+.label-error-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error-input {
+  font-size: 0.75rem;
+  align-self: end;
+  color: #f1b038;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.choice {
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+}
+
+.tip-options_btn-custom .choice {
+  background-color: transparent;
+  color: var(--dark-grayish-cyan);
+  font-weight: 700;
 }
 
 @media (min-width: 769px) {
@@ -191,20 +245,26 @@ footer {
   header {
     margin: 0rem;
   }
+
   main {
     margin-top: 2rem;
     border-radius: 1.5rem;
-    width: 50%;
+    width: 45%;
     height: 50%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 1em;
+    gap: 1rem;
   }
 
   .calculator_tip-options {
     margin-top: 1rem;
   }
+
+  /* .tip-options_input {
+    font-size: 1rem;
+    width: 100%;
+  } */
 
   .tip-options_grid {
     margin: 1rem;
@@ -234,6 +294,17 @@ footer {
     align-self: stretch;
     margin-top: 0;
     height: 100%;
+  }
+
+  .input-group_field {
+    /* outline: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0.2rem;
+  }
+
+  .input-group__input {
+    /* outline: 1px solid red; */
   }
 
   footer {
