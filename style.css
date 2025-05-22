@@ -74,6 +74,7 @@ main {
 .input-group_field {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 2rem;
   width: 100%;
   background-color: var(--very-light-grayish-cyan);

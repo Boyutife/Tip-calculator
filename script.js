@@ -45,6 +45,7 @@ numPeople.addEventListener('input', (e) => {
 tipOptions.forEach((tip) => {
   tip.addEventListener('click', (e) => {
     let value = e.target.innerText;
+    value = value = value.slice(0, 3);
     let valueNum = parseFloat(value.replace('%', '')) / 100;
     tipValue = parseFloat(valueNum.toFixed(2));
     tipOptions.forEach((tip) => {
